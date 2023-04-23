@@ -1,0 +1,313 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $black;
+    width: 100%;
+    height: 8.875rem;
+    z-index: 3;
+
+    /* Mobile */
+    @media ($mobile) {
+        width: 100%;
+        height: 3.375rem;
+        transition: all .4s;
+
+        &.active {
+            height: 100vh;
+            transition: all .4s;
+        }
+
+        .shell {
+            padding: 0;
+        }
+    }
+
+    .content__menu {
+        display: flex;
+        width: 100%;
+        height: 8.875rem;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        /* Mobile */
+        @media ($mobile) {
+            position: relative;
+            height: 3.375rem;
+            flex-wrap: wrap;
+        }
+
+        .open__menu {
+            display: none;
+            position: absolute;
+            right: 3rem;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 1.145rem;
+            transition: all .4s;
+
+            /* Mobile */
+            @media ($mobile) {
+                display: block;
+
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 100vh;
+                    z-index: 0;
+                    background-color: $black;
+                    opacity: 0;
+                    visibility: hidden;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    transition: all .4s;
+                }
+
+                &.active {
+                    right: 1.25rem;
+                    transition: all .4s;
+
+                    &::before {
+                        visibility: visible;
+                        opacity: .7;
+                        transition: all .4s;
+                    }
+
+                    .hamburger-line {
+                        width: 1.25rem;
+
+                        &--top {
+                            transform: rotate(45deg);
+                            top: 0.25rem;
+                            height: 0.125rem;
+                        }
+
+                        &--middle {
+                            opacity: 0;
+                        }
+
+                        &--bottom {
+                            transform: rotate(-45deg);
+                            top: 0px;
+                            height: 0.125rem;
+                        }
+                    }
+                }
+
+                .hamburger-line {
+                    display: block;
+                    width: 25.11px;
+                    border-radius: 10px;
+                    height: 2px;
+                    background-color: $yellow;
+                    position: relative;
+                    z-index: 9;
+                    transform-origin: 50% 50%;
+                    transition: all 300ms ease-in-out;
+
+                    &--middle {
+                        top: 6px;
+                    }
+
+                    &--bottom {
+                        top: 12px;
+                    }
+                }
+            }
+        }
+
+        .logo {
+            @media ($mobile) {
+                max-width: 1.7731rem;
+                margin-left: 2.6875rem;
+            }
+        }
+
+        .navbar {
+            @media ($mobile) {
+                position: relative;
+                width: 100%;
+            }
+
+            .close__menu {
+                display: none;
+
+                @media ($mobile) {
+                    position: fixed;
+                    top: 18.97px;
+                    right: calc(50% - 11rem);
+                    z-index: 4;
+                    transform: translateX(62.5rem);
+                    transition: all .4s;
+
+                    &.active {
+                        transform: translateX(0);
+                        transform: all .4s;
+                    }
+                }
+            }
+
+            .logo__mobile {
+                display: none;
+
+                @media ($mobile) {
+                    display: flex;
+                    justify-content: center;
+                    max-width: 3.0838rem;
+                    right: 4.4rem;
+                    top: 3.0181rem;
+                    z-index: 9;
+                    position: fixed;
+                    transform: translateX(62.5rem);
+                    transition: all .4s;
+
+                    &.active {
+                        transform: translateX(0);
+                        transition: all .4s;
+                    }
+                }
+            }
+
+            .menu {
+                display: flex;
+                width: 40.75rem;
+                justify-content: space-between;
+                margin-bottom: 1.6875rem;
+
+                /* Mobile */
+                @media ($mobile) {
+                    position: fixed;
+                    right: 0;
+                    top: 0;
+                    flex-direction: column;
+                    background-color: $black;
+                    width: 11.5rem;
+                    justify-content: flex-start;
+                    height: 100vh;
+                    padding: 10.4375rem 0 0;
+                    align-items: center;
+                    transform: translateX(62.5rem);
+                    transition: all .4s;
+
+                    &.active {
+                        transform: translateX(0);
+                        transition: all .4s;
+                    }
+                }
+
+                .menu-item {
+
+                    /* Mobile */
+                    @media ($mobile) {
+                        margin-bottom: 1.375rem;
+                    }
+
+                    a {
+                        @include font-roboto(0.75rem, 400);
+                        color: $white;
+                        text-transform: uppercase;
+                        transition: all .4s;
+
+                        @media ($tabletMin) {
+                            &:hover {
+                                color: $yellow;
+                                transition: all .4s;
+                            }
+                        }
+
+                        /* Mobile */
+                        @media ($mobile) {
+                            font-size: 0.75rem;
+                            line-height: 0.8125rem;
+                        }
+                    }
+
+                    &.current_page_item {
+                        a {
+                            color: $yellow;
+                        }
+                    }
+                }
+            }
+
+            .search {
+                @media ($mobile) {
+                    width: 100%;
+                    position: absolute;
+                    right: 0;
+                    top: 0.25rem;
+                    left: 0;
+                    box-shadow: 0px 3px 6px #00000029;
+                    z-index: -1;
+                }
+
+                #ajaxsearchlite1 .probox,
+                div.asl_w .probox .promagnifier,
+                div.asl_w .probox {
+                    height: 2.4375rem;
+
+                    @media ($mobile) {
+                        height: 2.5375rem;
+                    }
+                }
+
+
+                div.asl_w .probox .promagnifier,
+                div.asl_m .probox .promagnifier .innericon {
+                    background-color: $yellow;
+                    width: 2.75rem;
+                }
+
+                #ajaxsearchlite1 .probox .proinput input,
+                div.asl_w .probox .proinput input {
+                    color: $text !important;
+                    height: 2.4375rem;
+                    font-size: 0.9375rem;
+
+                    &::placeholder {
+                        color: $text !important;
+                    }
+                }
+
+                div.asl_m .probox .proclose svg {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+div.asl_r.vertical {
+    background: $white !important;
+    top: 6.375rem !important;
+
+    @media ($mobile) {
+        top: 5.25rem !important;
+    }
+}
+
+div.asl_r .results .item .asl_content {
+    display: flex;
+    align-items: center;
+}
+
+div[id*='ajaxsearchliteres'].wpdreams_asl_results .results img.asl_image {
+    border: 0.0625rem solid $border;
+}
+
+div.asl_r .results .item .asl_content h3,
+div.asl_r .results .item .asl_content h3 a {
+    @include font-roboto(0.875rem, 300);
+    color: $text-dark !important;
+    line-height: 1.125rem;
+}
+
+@media ($mobile) {
+    div.asl_r.asl_w.vertical .results .item {
+        width: 100% !important;
+    }
+}

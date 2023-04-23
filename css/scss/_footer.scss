@@ -1,0 +1,99 @@
+.footer {
+    background-color: $black;
+    height: 14.8094rem;
+
+    @media ($mobile) {
+        height: 33.9rem
+    }
+
+    .content__footer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 1.6444rem;
+
+        @media ($mobile) {
+            padding-top: 2.025rem;
+        }
+    }
+
+    /* ---- COOKIES -----*/
+
+    .box-cookies.hide {
+        display: none !important;
+    }
+
+    .box-cookies {
+        position: fixed;
+        background-color: $black;
+        width: 67.4375rem;
+        z-index: 998;
+        bottom: 0;
+        height: 5.5625rem;
+        display: flex;
+        align-items: center;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 1.5rem 2.125rem 1.625rem 3.125rem;
+
+        @media ($mobile) {
+            justify-content: center;
+            padding: 1.25rem 0;
+            height: 12.4375rem;
+            width: 100%;
+        }
+
+        .container--cookies {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            @media ($mobile) {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .text {
+                width: 70%;
+
+                @media ($mobile) {
+                    width: 19.75rem;
+                    margin-left: 0;
+                }
+
+                .msg-cookies {
+                    @include font-roboto(0.875rem, 300);
+                    color: $white;
+                    line-height: 1.375rem;
+                    text-align: center;
+
+                    a {
+                        text-decoration: underline;
+                    }
+
+                    @media ($mobile) {
+                        text-align: center;
+                        font-size: 1rem;
+                        line-height: 1.375rem;
+                        width: 100%;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+
+            }
+
+            .btn__primary {
+                border-radius: 0.125rem;
+                width: 14.0625rem;
+
+                @media ($mobile) {
+                    width: 13.125rem;
+                }
+            }
+        }
+    }
+
+    /* ---- COOKIES -----*/
+}

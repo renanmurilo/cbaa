@@ -1,0 +1,129 @@
+body {
+	min-width: 20rem;
+	font-size: 1rem;
+	color: #000;
+}
+
+.shell {
+	max-width: 67.6044rem;
+	margin: 0 auto;
+
+	/* Mobile */
+	@media ($mobile) {
+		width: 100%;
+		padding: 0 2.2188rem;
+	}
+}
+
+main {
+	height: 100%;
+	width: 100%;
+	margin-top: 8.875rem;
+
+	@media ($mobile) {
+		margin-top: 5.8125rem;
+	}
+}
+
+.section__breadcrumb {
+	width: 100%;
+	padding-top: 5.5rem;
+
+	@media ($mobile) {
+		padding-top: 2rem;
+	}
+
+	.breadcrumbs {
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		@media ($mobile) {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&:first-child {
+			margin-left: 0;
+			color: $text-dark;
+		}
+
+		span {
+			@include font-roboto(1.125rem, 300);
+			color: $text-dark;
+			margin: 0 .2rem;
+
+			&:first-child {
+				margin-left: 0;
+				color: $text-dark;
+			}
+
+			a {
+				@include font-roboto(1.125rem, 300);
+				color: $text-dark;
+			}
+		}
+	}
+}
+
+.section__privacidade {
+	width: 100%;
+	padding-top: 6.625rem;
+
+	@media ($mobile) {
+		padding-top: 2.5rem;
+	}
+
+	h1 {
+		@include title-destaque;
+	}
+
+	.desctiption {
+		margin-top: 4.6381rem;
+		margin-bottom: 10.9769rem;
+
+		h2 {
+			@include font-roboto(1.75rem, 700);
+			color: $black;
+			text-transform: uppercase;
+			margin-bottom: 1.1475rem;
+			margin-top: 3.75rem;
+
+			@media ($mobile) {
+				margin: 2.5rem 0 1.1475rem;
+				font-size: 1.25rem;
+			}
+		}
+
+		p {
+			@include font-roboto(1.5rem, 300);
+			color: $black;
+			line-height: 2rem;
+			margin-bottom: 1.25rem;
+
+			@media ($mobile) {
+				font-size: 1rem;
+				line-height: 1.5rem;
+				margin-bottom: 2rem;
+			}
+		}
+
+		ul {
+			margin-bottom: 1.25rem;
+
+			li {
+				@include font-roboto(1.5rem, 300);
+				color: $black;
+				line-height: 2rem;
+				list-style: disc;
+				margin-left: 1.5rem;
+
+				@media ($mobile) {
+					font-size: 1rem;
+					line-height: 1.5rem;
+					margin-left: 1.2rem;
+				}
+			}
+		}
+	}
+}
