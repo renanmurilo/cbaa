@@ -2,10 +2,11 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: $black;
+    background-color: $white;
     width: 100%;
-    height: 8.875rem;
+    height: 10.3125rem;
     z-index: 3;
+    box-shadow: 0px 0.1875rem 0.375rem #00000029;
 
     /* Mobile */
     @media ($mobile) {
@@ -26,7 +27,7 @@
     .content__menu {
         display: flex;
         width: 100%;
-        height: 8.875rem;
+        height: 10.3125rem;
         align-items: center;
         justify-content: space-between;
         position: relative;
@@ -174,8 +175,9 @@
 
             .menu {
                 display: flex;
-                width: 40.75rem;
+                width: 53.3931rem;
                 justify-content: space-between;
+                align-items: center;
                 margin-bottom: 1.6875rem;
 
                 /* Mobile */
@@ -200,21 +202,115 @@
                 }
 
                 .menu-item {
+                    position: relative;
 
                     /* Mobile */
                     @media ($mobile) {
                         margin-bottom: 1.375rem;
                     }
 
+                    &:first-child {
+                        transform: rotateX(0);
+                        transition: all .4s;
+
+                        &::before {
+                            content: '';
+                            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5LjMyNCIgaGVpZ2h0PSI0LjE3NSIgdmlld0JveD0iMCAwIDkuMzI0IDQuMTc1Ij4KICA8cGF0aCBpZD0iQ2FtaW5ob181NTUiIGRhdGEtbmFtZT0iQ2FtaW5obyA1NTUiIGQ9Ik03MzcuNjUzLDIyLjE5MWw0LjQyMywzLjE1MSw0LjMxNi0zLjE1MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTczNy4zNjMgLTIxLjc4NCkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI5MjkyZSIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPgo=);
+                            width: 0.5463rem;
+                            height: 0.25rem;
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                            display: block;
+                            position: absolute;
+                            right: -1rem;
+                            vertical-align: middle;
+                            top: 1px;
+                            bottom: 0;
+                            margin: auto;
+                        }
+
+                        @media ($tabletMin) {
+                            &:hover {
+                                &::before {
+                                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5LjYxNiIgaGVpZ2h0PSI0LjY4NyIgdmlld0JveD0iMCAwIDkuNjE2IDQuNjg3Ij4KICA8cGF0aCBpZD0iQ2FtaW5ob181NTUiIGRhdGEtbmFtZT0iQ2FtaW5obyA1NTUiIGQ9Ik03MzcuNjUzLDIyLjE5MWw0LjQyMywzLjE1MSw0LjMxNi0zLjE1MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTczNy4yMTggLTIxLjU4KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDUzMzE3IiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8L3N2Zz4K);
+                                    width: 0.5463rem;
+                                    height: 0.25rem;
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                    display: block;
+                                    position: absolute;
+                                    right: -1rem;
+                                    vertical-align: middle;
+                                    top: 1px;
+                                    bottom: 0;
+                                    margin: auto;
+                                }
+                            }
+                        }
+                    }
+
+                    &.active {
+                        &::before {
+                            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5LjYxNiIgaGVpZ2h0PSI0LjY4NyIgdmlld0JveD0iMCAwIDkuNjE2IDQuNjg3Ij4KICA8cGF0aCBpZD0iQ2FtaW5ob181NTUiIGRhdGEtbmFtZT0iQ2FtaW5obyA1NTUiIGQ9Ik03MzcuNjUzLDIyLjE5MWw0LjQyMywzLjE1MSw0LjMxNi0zLjE1MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTczNy4yMTggLTIxLjU4KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDUzMzE3IiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8L3N2Zz4K);
+                            width: 0.5463rem;
+                            height: 0.25rem;
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                            display: block;
+                            position: absolute;
+                            right: -1rem;
+                            vertical-align: middle;
+                            top: 1px;
+                            bottom: 0;
+                            margin: auto;
+                            transform: rotateX(180deg);
+                            transition: all .4s;
+                        }
+
+                        a {
+                            color: $primary;
+                            font-weight: 600;
+                        }
+                    }
+
+
+                    &:last-child {
+                        width: 8.375rem;
+                        height: 2.6875rem;
+                        background-color: $primary;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 0.1875rem;
+
+                        a {
+                            color: $primary-light;
+                            font-weight: 600;
+                            text-transform: uppercase;
+
+                            @media ($tabletMin) {
+                                &:hover {
+                                    color: $primary-light;
+                                }
+                            }
+                        }
+
+                        &.current_page_item {
+                            a {
+                                color: $primary-light;
+                            }
+                        }
+                    }
+
                     a {
-                        @include font-roboto(0.75rem, 400);
-                        color: $white;
-                        text-transform: uppercase;
+                        @include font-primary(1rem, 300);
+                        color: $text;
                         transition: all .4s;
 
                         @media ($tabletMin) {
                             &:hover {
-                                color: $yellow;
+                                color: $primary;
+                                font-weight: 600;
                                 transition: all .4s;
                             }
                         }
@@ -228,86 +324,69 @@
 
                     &.current_page_item {
                         a {
-                            color: $yellow;
+                            color: $primary;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .sub-menu {
+                        position: absolute;
+                        opacity: 0;
+                        visibility: hidden;
+                        left: -1rem;
+                        transition: all .4s;
+                        width: 9.75rem;
+                        height: 8.875rem;
+                        padding: 0.875rem;
+                        border-radius: 0.125rem;
+                        background-color: $white;
+                        box-shadow: 0px 0.1875rem 0.375rem #00000029;
+
+                        &.active {
+                            opacity: 1;
+                            visibility: visible;
+                            transition: all .4s;
+                        }
+
+                        .menu-item {
+                            margin-bottom: 0.8125rem;
+
+                            a {
+                                @include font-primary(0.75rem, 300);
+                                color: $text;
+                            }
+
+                            &:first-child {
+                                &::before {
+                                    display: none;
+                                }
+                            }
+
+                            &:last-child {
+                                width: initial;
+                                height: initial;
+                                background-color: transparent;
+                                border-radius: none;
+                                display: initial;
+                                margin-bottom: 0;
+
+                                a {
+                                    color: $text;
+                                    text-transform: initial;
+                                }
+
+                                @media ($tabletMin) {
+                                    &:hover {
+                                        color: $text;
+                                        font-weight: 600;
+                                        transition: all .4s;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
-
-            .search {
-                @media ($mobile) {
-                    width: 100%;
-                    position: absolute;
-                    right: 0;
-                    top: 0.25rem;
-                    left: 0;
-                    box-shadow: 0px 3px 6px #00000029;
-                    z-index: -1;
-                }
-
-                #ajaxsearchlite1 .probox,
-                div.asl_w .probox .promagnifier,
-                div.asl_w .probox {
-                    height: 2.4375rem;
-
-                    @media ($mobile) {
-                        height: 2.5375rem;
-                    }
-                }
-
-
-                div.asl_w .probox .promagnifier,
-                div.asl_m .probox .promagnifier .innericon {
-                    background-color: $yellow;
-                    width: 2.75rem;
-                }
-
-                #ajaxsearchlite1 .probox .proinput input,
-                div.asl_w .probox .proinput input {
-                    color: $text !important;
-                    height: 2.4375rem;
-                    font-size: 0.9375rem;
-
-                    &::placeholder {
-                        color: $text !important;
-                    }
-                }
-
-                div.asl_m .probox .proclose svg {
-                    background-color: $white;
-                }
-            }
         }
-    }
-}
-
-div.asl_r.vertical {
-    background: $white !important;
-    top: 6.375rem !important;
-
-    @media ($mobile) {
-        top: 5.25rem !important;
-    }
-}
-
-div.asl_r .results .item .asl_content {
-    display: flex;
-    align-items: center;
-}
-
-div[id*='ajaxsearchliteres'].wpdreams_asl_results .results img.asl_image {
-    border: 0.0625rem solid $border;
-}
-
-div.asl_r .results .item .asl_content h3,
-div.asl_r .results .item .asl_content h3 a {
-    @include font-roboto(0.875rem, 300);
-    color: $text-dark !important;
-    line-height: 1.125rem;
-}
-
-@media ($mobile) {
-    div.asl_r.asl_w.vertical .results .item {
-        width: 100% !important;
     }
 }

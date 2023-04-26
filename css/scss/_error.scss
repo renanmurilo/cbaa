@@ -12,13 +12,13 @@
 
         h1 {
             margin-bottom: 1.875rem;
-            @include font-roboto(5rem, 500);
+            @include font-primary(5rem, 500);
             color: $yellow;
             text-transform: uppercase;
         }
 
         h2 {
-            @include font-roboto(1.75rem, 500);
+            @include font-primary(1.75rem, 500);
             color: $black;
             margin-bottom: 1.875rem;
         }

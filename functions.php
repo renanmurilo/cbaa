@@ -48,4 +48,24 @@
         register_nav_menu('menu-principal',__( 'Menu Principal' ));
     }
     add_action( 'init', 'register_my_menu' );
+
+    function custom_login_logo() {
+        echo '<style type="text/css">
+            h1 a { background-image: url(' . get_stylesheet_directory_uri() . '/images/logo.svg) !important; background-size: 200px!important; width: 250px!important;cursor-pointer:default!important; pointer-events:none!important }
+        </style>';
+    }
+    add_action('login_head', 'custom_login_logo');
+
+    // páginas de opção
+    if( function_exists('acf_add_options_page') ) {
+        // página de opções
+        $option_page = acf_add_options_page(array(
+            'page_title'    => 'CBAA – GERAL', // título
+            'menu_title'    => 'CBAA – GERAL', // Texto do menu
+            'menu_slug'     => 'personalizar', // slug
+            'capability'    => 'edit_posts', // quem pode acessar
+            'position' => 2,
+            'redirect'  => true
+        ));
+    }
 ?>

@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     border: none;
-    @include font-roboto(1.125rem, 500);
+    @include font-primary(1.125rem, 500);
     text-transform: uppercase;
 
     @media ($mobile) {

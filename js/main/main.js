@@ -22,6 +22,16 @@ closeMenu.addEventListener('click', (e) => {
     logo.classList.toggle('active')
 });
 
+let btnDropDown = document.getElementById('menu-item-50');
+let subMenu = document.querySelector('.sub-menu');
+
+btnDropDown.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    subMenu.classList.toggle('active')
+    btnDropDown.classList.toggle('active')
+})
+
 $(document).ready(function() {
     let openProducts = document.getElementById('openProducts');
     let contentModelos = document.querySelector('.content__modelos');

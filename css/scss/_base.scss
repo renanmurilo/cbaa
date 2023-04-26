@@ -5,7 +5,7 @@ body {
 }
 
 .shell {
-	max-width: 67.6044rem;
+	max-width: 68rem;
 	margin: 0 auto;
 
 	/* Mobile */
@@ -18,7 +18,7 @@ body {
 main {
 	height: 100%;
 	width: 100%;
-	margin-top: 8.875rem;
+	margin-top: 18.875rem;
 
 	@media ($mobile) {
 		margin-top: 5.8125rem;
@@ -49,7 +49,7 @@ main {
 		}
 
 		span {
-			@include font-roboto(1.125rem, 300);
+			@include font-primary(1.125rem, 300);
 			color: $text-dark;
 			margin: 0 .2rem;
 
@@ -59,7 +59,7 @@ main {
 			}
 
 			a {
-				@include font-roboto(1.125rem, 300);
+				@include font-primary(1.125rem, 300);
 				color: $text-dark;
 			}
 		}
@@ -75,7 +75,7 @@ main {
 	}
 
 	h1 {
-		@include title-destaque;
+		// @include font-primary-destaque;
 	}
 
 	.desctiption {
@@ -83,7 +83,7 @@ main {
 		margin-bottom: 10.9769rem;
 
 		h2 {
-			@include font-roboto(1.75rem, 700);
+			@include font-primary(1.75rem, 700);
 			color: $black;
 			text-transform: uppercase;
 			margin-bottom: 1.1475rem;
@@ -96,7 +96,7 @@ main {
 		}
 
 		p {
-			@include font-roboto(1.5rem, 300);
+			@include font-primary(1.5rem, 300);
 			color: $black;
 			line-height: 2rem;
 			margin-bottom: 1.25rem;
@@ -112,7 +112,7 @@ main {
 			margin-bottom: 1.25rem;
 
 			li {
-				@include font-roboto(1.5rem, 300);
+				@include font-primary(1.5rem, 300);
 				color: $black;
 				line-height: 2rem;
 				list-style: disc;

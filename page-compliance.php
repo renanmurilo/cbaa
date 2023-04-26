@@ -1,5 +1,5 @@
 <?php
-// Template Name: Contato
+// Template Name: Compliance
 get_header();
 ?>
     <?php if(have_posts()) { while (have_posts()) { the_post(); ?>
