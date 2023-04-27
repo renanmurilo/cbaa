@@ -3,7 +3,8 @@
     height: 17.62rem;
 
     @media ($mobile) {
-        height: 33.9rem
+        height: 100%;
+        padding-bottom: 2.3519rem;
     }
 
     .content__footer {
@@ -20,11 +21,51 @@
         .widget {
             width: auto;
 
+            @media ($mobile) {
+                width: 100%;
+
+                &:nth-last-child(1) {
+                    order: 0;
+                }
+
+                &:nth-child(1) {
+                    order: 1;
+                    width: 60%;
+                    margin: auto;
+                }
+
+                &:nth-child(2) {
+                    order: 2;
+
+                    ul {
+                        .link {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:nth-child(3) {
+                    order: 3;
+
+                    h3 {
+                        margin-top: 2.5rem;
+                    }
+                }
+
+                .logo {
+                    display: none;
+                }
+            }
+
             .sociais {
                 margin: 2.5337rem 0 2.4481rem;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
+                @media ($mobile) {
+                    margin: 4rem 0 2.5225rem;
+                }
             }
 
             h3 {
@@ -32,16 +73,31 @@
                 color: $white;
                 text-transform: uppercase;
                 margin-bottom: 1.0625rem;
+
+                @media ($mobile) {
+                    text-align: center;
+                }
             }
 
             ul {
                 width: 14.125rem;
+
+                @media ($mobile) {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
 
                 li {
                     p {
                         @include font-primary(0.75rem, 400);
                         color: $white;
                         line-height: 1.25rem;
+
+                        @media ($mobile) {
+                            text-align: center;
+                        }
                     }
 
                     .mail {
@@ -54,6 +110,14 @@
                 .link {
                     margin-top: 0.625rem;
 
+                    &.mobile {
+                        display: none;
+
+                        @media ($mobile) {
+                            display: flex;
+                        }
+                    }
+
                     a {
                         @include font-primary(0.75rem, 600);
                         color: $white;
@@ -63,6 +127,10 @@
 
             .news {
                 width: 16.1875rem;
+
+                @media ($mobile) {
+                    width: 100%;
+                }
 
                 form,
                 .wpcf7-form {
@@ -138,6 +206,11 @@
     .copy {
         width: 100%;
 
+        @media ($mobile) {
+            max-width: 16.5rem;
+            margin: 2.25rem auto 0;
+        }
+
         p {
             color: $white;
             text-align: center;
@@ -153,17 +226,19 @@
 
     .box-cookies {
         position: fixed;
-        background-color: $black;
-        width: 67.4375rem;
+        background-color: $white;
+        width: 68rem;
         z-index: 998;
-        bottom: 0;
+        bottom: 2rem;
         height: 5.5625rem;
         display: flex;
         align-items: center;
         left: 0;
         right: 0;
         margin: auto;
+        box-shadow: 1.25rem 0.9375rem 1.875rem #00000014;
         padding: 1.5rem 2.125rem 1.625rem 3.125rem;
+        border-radius: 0.125rem;
 
         @media ($mobile) {
             justify-content: center;
@@ -192,8 +267,8 @@
                 }
 
                 .msg-cookies {
-                    @include font-primary(0.875rem, 300);
-                    color: $white;
+                    @include font-primary(0.875rem, 400);
+                    color: $text-light;
                     line-height: 1.375rem;
                     text-align: center;
 
@@ -214,7 +289,15 @@
 
             .btn__primary {
                 border-radius: 0.125rem;
-                width: 14.0625rem;
+                width: 12.6875rem;
+                height: 2.8125rem;
+                font-size: 0.875rem;
+
+                @media ($tabletMin) {
+                    &:hover {
+                        font-size: 0.875rem;
+                    }
+                }
 
                 @media ($mobile) {
                     width: 13.125rem;

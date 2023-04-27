@@ -56,6 +56,14 @@
                         <li class="link">
                             <a href="<?php echo get_home_url(); ?>">Filiais</a>
                         </li>
+
+                        <li class="link mobile">
+                            <a href="<?php echo get_home_url(); ?>" >Política de privacidade</a>
+                        </li>
+
+                        <li class="link mobile">
+                            <a href="<?php echo get_home_url(); ?>">Ouvidoria</a>
+                        </li>
                     </ul>
                 </div>
 

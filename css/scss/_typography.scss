@@ -5,3 +5,19 @@
     font-weight: $font-weight;
     font-family: 'Montserrat', sans-serif;
 }
+
+@mixin titulo($font-size: 3rem,
+    $font-weight: 700,
+) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-family: 'Montserrat', sans-serif;
+
+    span {
+        font-weight: 400;
+    }
+
+    @media($mobile) {
+        font-size: 1.75rem;
+    }
+}

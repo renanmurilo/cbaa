@@ -1,36 +1,43 @@
 .btn {
-    width: 10.625rem;
-    height: 2.5rem;
+    width: 13.4375rem;
+    height: 3.8125rem;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    @include font-primary(1.125rem, 500);
+    @include font-primary(1rem, 600);
     text-transform: uppercase;
+    border-radius: 0.1875rem;
+    transition: all .4s;
 
     @media ($mobile) {
-        width: 8.5rem;
-        height: 2.8125rem;
-        font-size: 1rem;
+        width: 13.125rem;
+        height: 3rem;
+        font-size: 0.875rem;
     }
 
     &__primary {
-        background-color: $yellow;
-        color: $black;
-        text-transform: uppercase;
+        background-color: $primary;
+        color: $primary-light;
+
+        @media ($tabletMin) {
+            &:hover {
+                font-size: 1.0625rem;
+                transition: all.4s;
+            }
+        }
     }
 
-    &__black {
-        background-color: $black;
-        color: $yellow;
-    }
+    &__secondary {
+        background-color: $primary-light;
+        color: $primary;
 
-    &__outline__black {
-        border: 0.0625rem solid $black;
-        color: $black;
-        width: 17.0625rem;
-        height: 3.5rem;
-        border-radius: 0.125rem;
+        @media ($tabletMin) {
+            &:hover {
+                font-size: 1.0625rem;
+                transition: all.4s;
+            }
+        }
     }
 }

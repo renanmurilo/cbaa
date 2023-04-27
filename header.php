@@ -43,11 +43,11 @@
                     
                     <nav class="navbar">
 						<a href="" class="close__menu">
-							X
+							x
 						</a>
 
 						<a href="<?php echo get_home_url(); ?>" class="logo__mobile">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Cbaa">
+							<img src="<?php the_field('logo_header', 'option'); ?>" alt="Cbaa">
 						</a>
 
                         <?php
@@ -58,6 +58,24 @@
                             );
                             wp_nav_menu( $args );
                         ?>
+
+						<div class="sociais" id="sociais">
+							<a href="<?php the_field('link_do_linkedin', 'option'); ?>" target="_blank">
+								<img src="<?php the_field('linkedin_mobile', 'option'); ?>" alt="">
+							</a>
+
+							<a href="<?php the_field('link_do_facebook', 'option'); ?>" target="_blank">
+								<img src="<?php the_field('facebook_mobile', 'option'); ?>" alt="">
+							</a>
+
+							<a href="<?php the_field('link_do_instagram', 'option'); ?>" target="_blank">
+								<img src="<?php the_field('instagram_mobile', 'option'); ?>" alt="">
+							</a>
+
+							<a href="<?php the_field('link_dio_whatsapp', 'option'); ?>" target="_blank">
+								<img src="<?php the_field('whatsapp_mobile', 'option'); ?>" alt="">
+							</a>
+						</div>
                     </nav>
                 </div>
 			</div>
