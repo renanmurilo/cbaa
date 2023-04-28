@@ -1,0 +1,154 @@
+.compliance {
+    width: 100%;
+
+    .content__compliance {
+        padding-top: 3rem;
+        width: 100%;
+
+        h2 {
+            @include font-primary(1.5625rem, 700);
+            color: $primary;
+            margin-bottom: 1.4975rem;
+        }
+
+        .text {
+            width: 100%;
+            margin-bottom: 3rem;
+
+            p {
+                @include font-primary(1.125rem, 300);
+                color: $text;
+                line-height: 1.75rem;
+            }
+        }
+
+        .accordeon {
+            width: 100%;
+            margin-bottom: 7rem;
+
+            details {
+                width: 100%;
+                margin: auto auto 1.25rem;
+                transition: all 1s !important;
+
+                @media ($mobile) {
+                    padding: 1.75rem 1.0313rem;
+                    max-width: 17.5rem;
+                }
+
+                &[open] {
+                    transition: all 2s !important;
+
+                    summary {
+                        margin-bottom: 1.1563rem;
+
+                        .icon {
+                            img {
+                                transform: rotateX(-180deg);
+                                transition: all .4s
+                            }
+                        }
+                    }
+                }
+
+                summary::-webkit-details-marker {
+                    display: none;
+                }
+
+                summary {
+                    width: 100%;
+                    cursor: pointer;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 0.0625rem solid $primary-light;
+
+                    h3 {
+                        @include font-primary(1.5625rem, 700);
+                        color: $primary;
+                        line-height: 2rem;
+                        padding-bottom: 0.4688rem;
+
+                        @media ($mobile) {
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                        }
+                    }
+
+                    .icon {
+                        position: absolute;
+                        right: 1.25rem;
+                        top: 0;
+                        bottom: 0;
+                        display: flex;
+                        align-items: center;
+                        margin: auto;
+
+                        @media ($mobile) {
+                            top: 0;
+                        }
+
+                        img {
+                            transform: rotateX(0);
+                            transition: all .4s
+                        }
+                    }
+                }
+
+                .content__details {
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 6.625rem;
+                    width: 100%;
+
+                    .text {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        margin-bottom: 0.3125rem;
+                        width: 100%;
+
+                        @media ($mobile) {
+                            width: 100%;
+                        }
+
+                        p {
+                            @include font-primary(1rem, 300);
+                            color: $primary;
+                            line-height: 1.75rem;
+                            margin-bottom: 1.5rem;
+                            width: -webkit-fill-available;
+
+                            em {
+                                font-weight: 500;
+                            }
+
+                            a {
+                                font-weight: 600;
+                                text-decoration: underline;
+                                margin-left: .2rem;
+                            }
+
+                            @media ($mobile) {
+                                font-size: 0.75rem;
+                                margin-left: 0;
+                            }
+                        }
+
+                        ol {
+                            li {
+                                @include font-primary(1rem, 300);
+                                color: $primary;
+                                line-height: 1.75rem;
+                                margin-bottom: 1.5rem;
+                                width: -webkit-fill-available;
+                                list-style: auto;
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

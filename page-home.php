@@ -33,7 +33,7 @@ get_header();
                                 <?php the_field('texto_descritivo'); ?>
                             </div>
 
-                            <a href="" class="btn btn__primary">
+                            <a href="<?php echo get_home_url(); ?>/quem-somos" class="btn btn__primary">
                                 Conheça mais
                             </a>
                         </div>
@@ -63,7 +63,7 @@ get_header();
                             <?php endwhile; else : endif; ?>
                         </div>
 
-                        <a href="" class="btn btn__secondary">
+                        <a href="<?php echo get_home_url(); ?>/produtos-e-servicos" class="btn btn__secondary">
                             Saiba mais
                         </a>
                     </div>
@@ -89,7 +89,7 @@ get_header();
                             <?php the_field('texto_excelencia'); ?>
                         </div>
 
-                        <a href="" class="btn btn__secondary">
+                        <a href="<?php echo get_home_url(); ?>/centro-tecnologico" class="btn btn__secondary">
                             Conheça nosso centro tecnológico
                         </a>
 
@@ -117,7 +117,7 @@ get_header();
                     <div class="content__flutuant">
                         <h2><?php the_field('texto_do_banner_final_excelencia'); ?></h2>
 
-                        <a href="" class="btn btn__secondary">
+                        <a href="<?php echo get_home_url(); ?>/contato" class="btn btn__secondary">
                             Entre em contato
                         </a>
                     </div>
@@ -179,7 +179,7 @@ get_header();
                                 <img src="<?php the_field('imagem_mapa_mobile'); ?>" alt="">
                             </div>
 
-                            <a href="" class="btn btn__primary">
+                            <a href="<?php echo get_home_url(); ?>/filiais" class="btn btn__primary">
                                 Saiba mais
                             </a>
                         </div>

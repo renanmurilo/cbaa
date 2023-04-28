@@ -29,8 +29,7 @@ $(document).ready(function() {
     let btnDropDown = document.getElementById('menu-item-50');
     let subMenu = document.querySelector('.sub-menu');
 
-    btnDropDown.addEventListener('click', function(e) {
-        e.preventDefault();
+    btnDropDown.addEventListener('click', function() {
 
         subMenu.classList.toggle('active')
         btnDropDown.classList.toggle('active')

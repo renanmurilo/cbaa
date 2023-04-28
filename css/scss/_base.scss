@@ -25,6 +25,53 @@ main {
 	}
 }
 
+.banner {
+	width: 100%;
+
+	.content__banner {
+		width: 100%;
+		position: relative;
+
+		.imagem__desktop {
+			@media ($mobile) {
+				display: none;
+			}
+		}
+
+		.imagem__mobile {
+			display: none;
+
+			@media ($mobile) {
+				display: block;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+
+		h1 {
+			@include titulo;
+			color: $white;
+			position: absolute;
+			bottom: 3.7313rem;
+			font-weight: 600;
+			text-transform: uppercase;
+
+			@media ($mobile) {
+				bottom: initial;
+				top: 4rem;
+			}
+
+			&.sustentabilidade {
+				@media ($mobile) {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
 .section__breadcrumb {
 	width: 100%;
 	padding-top: 5.5rem;

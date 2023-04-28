@@ -108,13 +108,14 @@
                 }
 
                 .link {
-                    margin-top: 0.625rem;
+                    margin-top: 0.125rem;
 
                     &.mobile {
                         display: none;
 
                         @media ($mobile) {
                             display: flex;
+                            margin-top: 0.625rem;
                         }
                     }
 

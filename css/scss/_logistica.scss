@@ -1,0 +1,160 @@
+.content__logistica {
+    width: 100%;
+
+    .inner__logistica {
+        width: 100%;
+        padding-top: 6.5625rem;
+
+        @media ($mobile) {
+            padding-top: 3.4475rem;
+        }
+
+        h2 {
+            @include font-primary(1.125rem, 300);
+            color: $text;
+            text-align: center;
+            line-height: 1.75rem;
+
+            @media ($mobile) {
+                font-size: 0.875rem;
+                line-height: 1.75rem;
+            }
+        }
+
+        .informacoes {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 4rem;
+
+            @media ($tabletMax) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media ($mobile) {
+                grid-template-columns: 1fr;
+            }
+
+            .widget {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                margin-bottom: 5.125rem;
+
+                @media ($mobile) {
+                    margin-bottom: 2.5rem;
+                }
+
+                .image {
+                    max-height: 7.3269rem;
+                    min-height: 7.3269rem;
+
+                    @media ($mobile) {
+                        min-height: 5.875rem;
+                        max-height: 5.875rem;
+
+                        img {
+                            width: 6.25rem;
+                            height: 100%
+                        }
+                    }
+                }
+
+                h3 {
+                    @include font-primary(1.125rem, 300);
+                    color: $text;
+                    margin-top: 2.2775rem;
+                    text-align: center;
+                    line-height: 1.75rem;
+                    max-width: 15.75rem;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                        margin-top: 0.9375rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner__bottom {
+    width: 100%;
+    position: relative;
+    height: 30.8125rem;
+    margin-top: 2.5rem;
+
+    @media ($mobile) {
+        margin-top: 1.25rem;
+        height: 33rem;
+    }
+
+    .description {
+        position: relative;
+        top: 8.3125rem;
+        left: 4.375rem;
+        z-index: 1;
+
+        @media ($mobile) {
+            left: initial;
+            top: 0;
+            padding-top: 17.745rem;
+        }
+
+        h2 {
+            @include titulo;
+            color: $white;
+            text-transform: uppercase;
+            line-height: 3.375rem;
+            max-width: 35.6875rem;
+            margin-bottom: 2.8125rem;
+
+            @media ($mobile) {
+                line-height: 2.3125rem;
+                margin-bottom: 1.5rem;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .image {
+        height: 100%;
+        position: absolute;
+        bottom: -1.6rem;
+        left: -35%;
+        z-index: 0;
+
+        @media (laptopMediumMax) {
+            left: -10%;
+        }
+
+        @media ($mobile) {
+            display: none;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            bottom: -.9rem;
+            z-index: 0;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+}
