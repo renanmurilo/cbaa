@@ -1,7 +1,11 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	min-width: 20rem;
-	font-size: 1rem;
 	color: #000;
+	font-size: 1rem;
 }
 
 .shell {
@@ -68,6 +72,25 @@ main {
 					font-size: 1.5rem;
 				}
 			}
+
+			&.canal {
+				@media ($mobile) {
+					max-width: 17.6875rem;
+					line-height: 2.875rem;
+					top: 3rem;
+				}
+			}
+
+			&.ouvidoria {
+				bottom: 4.6875rem;
+				margin-bottom: 0;
+
+				@media ($mobile) {
+					max-width: 10.75rem;
+					line-height: 2.875rem;
+					top: 3rem;
+				}
+			}
 		}
 	}
 }
@@ -113,64 +136,9 @@ main {
 	}
 }
 
-.section__privacidade {
-	width: 100%;
-	padding-top: 6.625rem;
-
-	@media ($mobile) {
-		padding-top: 2.5rem;
-	}
-
-	h1 {
-		// @include font-primary-destaque;
-	}
-
-	.desctiption {
-		margin-top: 4.6381rem;
-		margin-bottom: 10.9769rem;
-
-		h2 {
-			@include font-primary(1.75rem, 700);
-			color: $black;
-			text-transform: uppercase;
-			margin-bottom: 1.1475rem;
-			margin-top: 3.75rem;
-
-			@media ($mobile) {
-				margin: 2.5rem 0 1.1475rem;
-				font-size: 1.25rem;
-			}
-		}
-
-		p {
-			@include font-primary(1.5rem, 300);
-			color: $black;
-			line-height: 2rem;
-			margin-bottom: 1.25rem;
-
-			@media ($mobile) {
-				font-size: 1rem;
-				line-height: 1.5rem;
-				margin-bottom: 2rem;
-			}
-		}
-
-		ul {
-			margin-bottom: 1.25rem;
-
-			li {
-				@include font-primary(1.5rem, 300);
-				color: $black;
-				line-height: 2rem;
-				list-style: disc;
-				margin-left: 1.5rem;
-
-				@media ($mobile) {
-					font-size: 1rem;
-					line-height: 1.5rem;
-					margin-left: 1.2rem;
-				}
-			}
-		}
-	}
+//contact form
+.wpcf7 form.invalid .wpcf7-response-output {
+	color: $orange-dark;
+	border-color: $orange-dark;
+	@include font-primary(0.75rem, 500);
 }

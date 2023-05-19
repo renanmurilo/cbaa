@@ -37,7 +37,7 @@ get_header();
                     <div class="shell">
                         <div class="description">
                             <h2><?php the_field('texto_em_cima_da_imagem'); ?></h2>
-                            <a href="" class="btn btn__secondary">Entre em contato</a>
+                            <a href="<?php echo get_home_url(); ?>/contato" class="btn btn__secondary">Entre em contato</a>
                         </div>
                     </div>
 

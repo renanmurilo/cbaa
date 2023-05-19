@@ -1,0 +1,167 @@
+.section__privacidade {
+    width: 100%;
+    margin-bottom: 6.6688rem;
+
+    .atualizacao {
+        padding: 1.4375rem 0 2.25rem;
+
+        p {
+            @include font-primary(0.8125rem, 400);
+            color: $text;
+        }
+    }
+
+    @media ($mobile) {
+        padding-top: 3.845rem;
+        margin-bottom: 4.8125rem;
+    }
+
+    &.etica {
+        .menu {
+            max-height: 9.25rem;
+            width: 100%;
+
+            @media ($mobile) {
+                max-height: 100%;
+            }
+        }
+    }
+
+    &.integridade {
+        .menu {
+            max-height: 13.25rem;
+            width: 100%;
+
+            @media ($mobile) {
+                max-height: 100%;
+
+                .link {
+                    margin-bottom: 0.7137rem;
+
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    h2 {
+        @include font-primary(1.25rem, 700);
+        color: $primary;
+        margin-bottom: 1.4975rem;
+        width: 100%;
+
+        @media ($mobile) {
+            font-size: 1.125rem;
+            margin-bottom: 1.625rem;
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 15.25rem;
+        width: 90%;
+
+        @media ($mobile) {
+            width: 100%;
+            max-height: 100%;
+        }
+
+        .link {
+            margin-bottom: .5rem;
+
+            @media ($mobile) {
+                margin-bottom: 1rem;
+            }
+
+            a {
+                @include font-primary(1.125rem, 300);
+                line-height: 2rem;
+                color: $text;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .content__privacidade {
+        padding-top: 4rem;
+        width: 100%;
+
+        @media ($mobile) {
+            padding-top: 2.625rem;
+        }
+
+        .widget {
+            width: 100%;
+            margin-bottom: 2.5rem;
+            position: relative;
+
+            .invisible {
+                position: absolute;
+                top: -12rem;
+
+                @media ($mobile) {
+                    top: -6rem;
+                }
+            }
+
+            h2 {
+                @include font-primary(1.25rem, 700);
+                color: $primary;
+                margin-bottom: 1.4975rem;
+
+                @media ($mobile) {
+                    font-size: 1rem;
+                    margin-bottom: 1.03rem;
+                }
+
+            }
+
+            .text {
+                width: 100%;
+
+                p {
+                    @include font-primary(1rem, 300);
+                    color: $text;
+                    line-height: 1.75rem;
+                    margin-bottom: 1rem;
+
+                    @media ($mobile) {
+                        font-size: 0.75rem;
+                        line-height: 1.5rem;
+                    }
+
+                    a {
+                        text-decoration: underline;
+                    }
+
+                    strong {
+                        font-weight: 500;
+                    }
+                }
+
+                ul {
+                    margin-left: 1rem;
+                    margin-bottom: 2rem;
+
+                    li {
+                        @include font-primary(1rem, 300);
+                        color: $text;
+                        line-height: 1.75rem;
+                        margin-bottom: .6rem;
+                        list-style: disc;
+
+                        @media ($mobile) {
+                            font-size: 0.75rem;
+                            line-height: 1.5rem;
+                            margin-bottom: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

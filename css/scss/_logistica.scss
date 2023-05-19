@@ -124,7 +124,7 @@
         left: -35%;
         z-index: 0;
 
-        @media (laptopMediumMax) {
+        @media ($desktopLarge) {
             left: -10%;
         }
 

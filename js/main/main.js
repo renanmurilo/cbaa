@@ -71,8 +71,7 @@ $('[data-group]').each(function () {
 $('[data-grupo]').each(function () {
     var $allTarget = $(this).find('[data-target]'),
         $allClick = $(this).find('[data-click]'),
-        $viewForm = $(this).find('[data-form]'),
-        $click = $(this).find('[data-open]'),
+        $close =$(this).find('[data-close]'),
         activeClass = 'active';
     
     $allClick.click(function (e) {
@@ -80,8 +79,6 @@ $('[data-grupo]').each(function () {
 
         $allTarget.removeClass(activeClass);
         $allClick.removeClass(activeClass);
-        $viewForm.removeClass(activeClass);
-        $click.removeClass(activeClass);
 
         var id = $(this).data('click'),
             $target = $('[data-target="' + id + '"]');
@@ -90,60 +87,12 @@ $('[data-grupo]').each(function () {
         $(this).addClass(activeClass)
     });
 
-    $click.click(function(e) {
+    $close.click(function (e) {
         e.preventDefault();
-
-        $viewForm.removeClass(activeClass);
-        $click.removeClass(activeClass);
-
-        var i = $(this).data('open'),
-            $teste = $('[data-form="' + i + '"]');
-
-        $teste.addClass(activeClass);
-        $(this).addClass(activeClass)
-    });
-});
-
-$(document).ready(function() {
-    const main = document.querySelector('[data-grupo="contato"]')
-    const btnFerramentas =document.querySelector('[data-click="ferramentas"]')
-    const btnRepresentante =document.querySelector('[data-open="representante-ferramentas"]')
-
-    if (main.classList.contains('contact')) {
-        let url = location.search
         
-        if(url) {
-            $(btnFerramentas).trigger('click');
-            $(btnRepresentante).trigger('click');
-        }
-    }
-});
-
-$(document).ready(function() {
-    const btnOrdenar = document.querySelector('.order__by form input[type="submit"]')
-    const formOrdenar =  document.getElementById('orderby');
-
-    $(formOrdenar).on('change', function() {
-        $(btnOrdenar).trigger('click')
+        $allTarget.removeClass(activeClass);
+        $allClick.removeClass(activeClass);
     })
-});
-
-$(document).ready(function() {
-    const current = document.querySelector('#current');
-    const imgs = document.querySelectorAll('.thumbs img');
-    const opacity = 0.4;
-
-    imgs[0].style.opacity = opacity;
-
-    imgs.forEach(img => img.addEventListener('click', imgClick));
-
-    function imgClick(e) {
-        imgs.forEach(img => (img.style.opacity = 1));
-        current.src = e.target.src;
-        current.classList.add('fade-in');
-        setTimeout(() => current.classList.remove('fade-in'), 500);
-        e.target.style.opacity = opacity;
-    }
 });
 
 (() => {

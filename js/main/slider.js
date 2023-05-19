@@ -7,69 +7,44 @@ $(document).ready(function() {
         autoplay: true,
     });
 
-     $('.slide-produto').addClass("owl-carousel").owlCarousel({
-        items: 5,
+    $('.slide-depoimentos').addClass("owl-carousel").owlCarousel({
+        items: 1,
         dots: false,
         nav: true,
         loop: true,
-        margin: 10,
-        autoplay: true,
-        responsive: {
-            0: {
-                items: 1,
-                margin: 10,
-            },
-            768:{
-                items:1,
-            },
-            1024: {
-              items: 5,
-            }
-        }
     });
 
-    $('.slide-home-publicacoes').addClass("owl-carousel").owlCarousel({
-        items: 3,
-        dots: true,
+     $('.slide-filiais').addClass("owl-carousel").owlCarousel({
+        dots: false,
         nav: true,
-        loop: true,
-        autoplay: true,
+        loop: false,
         margin: 10,
         responsive: {
             0: {
-                items: 1,
-                margin: 0,
-                center: true
+                items: 3,
             },
             768:{
-                items:2,
+                items:3,
             },
             1024: {
-              items: 3,
-              dots: true,
-              nav: true,
-              loop: true,
-              autoplay: true,
-              margin: 10,
+              items: 7,
             }
         }
     });
 
     $('.slider-nossa-historia').addClass("owl-carousel").owlCarousel({
         items: 4,
-        nav: false, 
+        nav: true, 
         dots: false,
         loop:false,
-        center:true,
-        margin: 132,
+        margin: 40,
         URLhashListener:true,
         autoplayHoverPause:true,
         startPosition: 'URLHash',
         responsive: {
             0: {
-                items: 1,
-                center: false,
-                margin: 20,
+                items: 2,
+                margin: 10,
                 autoplayHoverPause:false,
             },
             768:{

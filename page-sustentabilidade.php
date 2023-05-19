@@ -52,8 +52,12 @@ get_header();
             <section class="doacoes">
                 <div class="shell">
                     <div class="content__doacoes">
-                        <div class="image">
-                            <img src="<?php the_field('imagem_doacoes'); ?>" alt="">
+                        <div class="slider__doacao slide-banners">
+                            <?php if(have_rows('imagem_slider_doacoes')): while(have_rows('imagem_slider_doacoes')) : the_row(); ?>
+                                <div class="image">
+                                    <img src="<?php the_sub_field('imagem'); ?>" alt="">
+                                </div>
+                            <?php endwhile; else : endif; ?>
                         </div>
 
                         <div class="description">

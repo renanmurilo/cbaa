@@ -26,6 +26,10 @@
 
                 &:nth-last-child(1) {
                     order: 0;
+
+                    h3 {
+                        text-align: left;
+                    }
                 }
 
                 &:nth-child(1) {
@@ -54,6 +58,14 @@
 
                 .logo {
                     display: none;
+                }
+            }
+
+            &:nth-child(3) {
+                ul {
+                    li {
+                        margin-top: 1.15rem;
+                    }
                 }
             }
 
@@ -108,7 +120,7 @@
                 }
 
                 .link {
-                    margin-top: 0.125rem;
+                    margin-top: 0.525rem;
 
                     &.mobile {
                         display: none;
@@ -173,27 +185,25 @@
                             right: 0;
                         }
 
-                        .label__check {
-                            .last {
-                                margin: 0.5rem 0 0;
+                        .wpcf7-list-item {
+                            margin: 0.8125rem 0 0;
 
-                                label {
-                                    display: flex;
-                                    align-items: flex-start;
+                            label {
+                                .field__check {
+                                    height: 0.8125rem;
+                                    width: 0.8125rem;
+                                    accent-color: $primary;
+                                }
 
-                                    input[name='aceite[]'] {
-                                        border: 2px solid $white;
-                                        background: transparent;
-                                        background-color: $primary;
-                                    }
+                                .wpcf7-list-item-label {
+                                    position: relative;
+                                    bottom: 1.6px;
+                                    color: $white;
+                                    @include font-primary(0.625rem, 400);
+                                    cursor: pointer;
 
-                                    .wpcf7-list-item-label {
-                                        color: $white;
-                                        @include font-primary(0.625rem, 400);
-                                        display: flex;
-                                        margin-left: 0.125rem;
-                                        position: relative;
-                                        bottom: 2px;
+                                    a {
+                                        text-decoration: underline;
                                     }
                                 }
                             }

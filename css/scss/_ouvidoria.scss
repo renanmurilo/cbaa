@@ -1,0 +1,32 @@
+.ouvidoria {
+    width: 100%;
+    margin-bottom: 7.165rem;
+
+    @media ($mobile) {
+        margin-bottom: 4rem;
+    }
+
+    .content__ouvidoria {
+        width: 100%;
+        padding-top: 4.75rem;
+
+        @media ($mobile) {
+            padding-top: 3.4475rem;
+        }
+
+        h2 {
+            @include font-primary(1.6875rem, 700);
+            color: $primary;
+            text-align: center;
+            max-width: 37.5rem;
+            line-height: 2.3125rem;
+            margin: auto auto 1.75rem;
+
+            @media ($mobile) {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+
+    @include form;
+}

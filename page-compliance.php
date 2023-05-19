@@ -6,8 +6,8 @@ get_header();
         <main>
             <section class="banner">
                 <div class="content__banner">
-                    <img class="imagem__desktop" src="<?php the_field('banner'); ?>" alt="<?php the_title(); ?>">
-                    <img class="imagem__mobile" src="<?php the_field('banner_mobile'); ?>" alt="<?php the_title(); ?>">
+                    <img class="imagem__desktop" src="<?php the_field('banner_internas_black', 'option'); ?>" alt="<?php the_title(); ?>">
+                    <img class="imagem__mobile" src="<?php the_field('banner_internas_mobile_black', 'option'); ?>" alt="<?php the_title(); ?>">
                     
                     <div class="shell">
                         <h1><?php the_title(); ?></h1>
@@ -43,6 +43,29 @@ get_header();
                                 </details>
                             <?php endwhile; else : endif; ?>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="canais__informacoes">
+                <div class="shell">
+                    <div class="content__canais__informacoes">
+                        <?php if(have_rows('canais_de_informacoes')): while(have_rows('canais_de_informacoes')) : the_row(); ?>
+                            <div class="box">
+                                <div class="image">
+                                    <img class="imagem__desktop" src="<?php the_sub_field('imagem'); ?>" alt="<?php the_sub_field('titulo'); ?>">
+                                    <img class="imagem__mobile" src="<?php the_sub_field('imagem_mobile'); ?>" alt="<?php the_sub_field('titulo'); ?>">
+                                </div>
+                                <div class="description">
+                                    <h3><?php the_sub_field('titulo'); ?></h3>
+                                    <div class="text">
+                                        <?php the_sub_field('texto'); ?>
+                                    </div>
+
+                                    <a href="<?php echo get_home_url(); ?>/<?php the_sub_field('link_da_pagina'); ?>" class="btn btn__secondary">Saiba mais</a>
+                                </div>
+                            </div>
+                        <?php endwhile; else : endif; ?>
                     </div>
                 </div>
             </section>

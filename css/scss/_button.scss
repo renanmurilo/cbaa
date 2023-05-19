@@ -40,4 +40,9 @@
             }
         }
     }
+
+    &__white {
+        border: 0.0625rem solid $white;
+        color: $white;
+    }
 }

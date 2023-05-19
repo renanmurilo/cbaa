@@ -1,0 +1,139 @@
+@mixin form {
+
+    .form__class,
+    .wpcf7-form {
+        width: 100%;
+        max-width: 28.75rem;
+        margin: auto;
+
+        @media ($mobile) {
+            max-width: 100%;
+        }
+
+        .form__row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            &.button {
+                justify-content: flex-end;
+                margin-top: 1.0625rem;
+
+                @media ($mobile) {
+                    justify-content: center;
+                    margin-top: 1.5rem;
+                }
+            }
+
+            .wpcf7-list-item {
+                margin-left: 0;
+                margin-top: 1.25rem;
+
+                @media ($mobile) {
+                    margin-top: 0;
+                    margin-bottom: 1rem;
+                }
+
+                label {
+                    display: flex;
+
+                    @media ($mobile) {
+                        align-items: flex-start;
+                    }
+                }
+
+                .wpcf7-list-item-label {
+                    color: $text;
+                    @include font-primary(0.875rem, 300);
+                    margin-left: .2rem;
+
+                    @media ($mobile) {
+                        position: relative;
+                        bottom: .45rem;
+                        font-size: 0.75rem;
+                        line-height: 1.4375rem;
+                        margin-left: 0.625rem;
+                    }
+                }
+            }
+
+            .form__controls {
+                width: 100%;
+                margin-bottom: 1rem;
+
+                &.w45 {
+                    width: 48%;
+                }
+
+                .field {
+                    width: 100%;
+                    height: 3.4375rem;
+                    border-radius: 0.125rem;
+                    border: 1px solid #666666;
+                    padding-left: 0.8125rem;
+                    @include font-primary(1rem, 300);
+                    color: #8E8E8E;
+
+                    &[type='file'] {
+                        display: none;
+                    }
+
+                    &[name='Mensagem'] {
+                        height: 12rem;
+                        padding-top: 1.1875rem;
+                    }
+
+                    &[name='Sugestao'] {
+                        height: 12rem;
+                        padding-top: 1.1875rem;
+                    }
+
+                    &[name='Data'] {
+                        padding-right: .5rem;
+                    }
+                }
+
+                select {
+                    width: 100%;
+                    height: 3.4375rem;
+                    border-radius: 0.125rem;
+                    border: 1px solid #666666;
+                    padding-left: 0.8125rem;
+                    @include font-primary(1rem, 300);
+                    color: #8E8E8E;
+                    background-repeat: no-repeat;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOS44MDciIGhlaWdodD0iOS41OTMiIHZpZXdCb3g9IjAgMCAxOS44MDcgOS41OTMiPgogIDxwYXRoIGlkPSJDYW1pbmhvXzEyMjEiIGRhdGEtbmFtZT0iQ2FtaW5obyAxMjIxIiBkPSJNNzM3LjY1NCwyMi4xOTFsOS41MzMsOC4wMzMsOS4zLTguMDMzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzM3LjE3MSAtMjEuNjE3KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNjY2IiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8L3N2Zz4K);
+                    background-size: 1.25rem;
+                    background-position: 97% 50%;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                }
+
+                .label__field {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    height: 3.4375rem;
+                    border-radius: 0.125rem;
+                    border: 1px solid #666666;
+                    padding-left: 2rem;
+                    @include font-primary(1rem, 300);
+                    color: #8E8E8E;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC4xMjMiIGhlaWdodD0iMjAuMDQ4IiB2aWV3Qm94PSIwIDAgMTAuMTIzIDIwLjA0OCI+CiAgPHBhdGggaWQ9Im5vdW4tY2xpcC0xNjUyODg4LTM4NUNBQyIgZD0iTTM5OS4yNTIsMjA4LjRhNC45NjcsNC45NjcsMCwwLDEtNC45NjItNC45NjJWMTkyLjA2NWEzLjUxNSwzLjUxNSwwLDAsMSw3LjAyOSwwdjEwLjU0NGEyLjA2OCwyLjA2OCwwLDEsMS00LjEzNSwwdi01LjM3NmEuNDE0LjQxNCwwLDEsMSwuODI3LDB2NS4zNzZhMS4yNDEsMS4yNDEsMCwxLDAsMi40ODEsMFYxOTIuMDY1YTIuNjg4LDIuNjg4LDAsMSwwLTUuMzc2LDB2MTEuMzcxYTQuMTM1LDQuMTM1LDAsMCwwLDguMjcsMHYtOS41MTFhLjQxNC40MTQsMCwxLDEsLjgyNywwdjkuNTExYTQuOTY4LDQuOTY4LDAsMCwxLTQuOTYyLDQuOTYyWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM5NC4xOSAtMTg4LjQ1KSIgZmlsbD0iIzhlOGU4ZSIgc3Ryb2tlPSIjOGU4ZThlIiBzdHJva2Utd2lkdGg9IjAuMiIvPgo8L3N2Zz4K);
+                        width: 0.62rem;
+                        height: 1.2406rem;
+                        vertical-align: middle;
+                        display: block;
+                        position: absolute;
+                        left: 0.8125rem;
+                    }
+                }
+            }
+        }
+    }
+}

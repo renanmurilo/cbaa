@@ -254,6 +254,14 @@
                     }
 
                     &:first-child {
+                        display: none;
+
+                        @media ($mobile) {
+                            display: flex;
+                        }
+                    }
+
+                    &:nth-child(2) {
                         transform: rotateX(0);
                         transition: all .4s;
 
@@ -433,11 +441,21 @@
                             }
 
                             &:first-child {
+                                display: flex;
 
                                 @media ($mobile) {
                                     right: 0;
                                 }
+                            }
 
+                            &.current_page_item {
+                                a {
+                                    color: $primary;
+                                    font-weight: 600;
+                                }
+                            }
+
+                            &:nth-child(2) {
                                 &::before {
                                     display: none;
                                 }
@@ -475,5 +493,6 @@
                 }
             }
         }
+
     }
 }

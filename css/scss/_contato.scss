@@ -1,0 +1,343 @@
+.contato {
+    width: 100%;
+    padding-top: 6rem;
+
+    @media ($mobile) {
+        padding-top: 3.4475rem;
+    }
+
+    .content__contato {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10.5rem;
+        width: 100%;
+
+        @media ($mobile) {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .form__contato {
+            h3 {
+                @include font-primary(1.125rem, 300);
+                color: $text;
+                margin-bottom: 1.625rem;
+
+                @media ($mobile) {
+                    font-size: 0.875rem;
+                    margin-bottom: 2.5rem;
+                    text-align: center;
+                    max-width: 11.125rem;
+                    margin: auto auto 2.5rem;
+                    line-height: 1.75rem;
+                }
+            }
+
+            @include form;
+        }
+
+        .infos__contato {
+            margin-top: 2.625rem;
+
+            @media ($mobile) {
+                margin-top: 4.0069rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .phone,
+            .email,
+            .endereco {
+                width: 100%;
+
+                p {
+                    @include font-primary(1.125rem, 300);
+                    color: $text-light;
+                    line-height: 1.875rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .phone {
+                @media ($mobile) {
+                    order: 0;
+                }
+            }
+
+            .email {
+                @media ($mobile) {
+                    order: 1;
+                }
+            }
+
+            .endereco {
+                margin-top: 2.875rem;
+
+                @media ($mobile) {
+                    margin-top: 1rem;
+                    order: 2;
+                }
+            }
+
+            .social {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 1.9375rem 0 3.375rem;
+
+                @media ($mobile) {
+                    margin: 2.5269rem auto 4.1875rem;
+                    order: 4;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .widget {
+
+                    @media ($mobile) {
+                        margin-bottom: 2.5281rem;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    a {
+                        max-width: 1.6719rem;
+                        margin-right: 2.7631rem;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                .btn__outline__primary {
+                    width: 8.375rem;
+                    height: 2.1875rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 0.125rem;
+                    color: $primary;
+                    border: 0.125rem solid $primary;
+                    @include font-primary(0.875rem, 600);
+                    text-transform: uppercase;
+                }
+            }
+
+            .mapa {
+                max-height: 19.8125rem;
+                width: 100%;
+
+                @media ($mobile) {
+                    order: 3;
+                    margin-top: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+.contato__filiais {
+    width: 100%;
+
+    h2 {
+        @include font-primary(1.875rem, 700);
+        color: $primary;
+        text-transform: uppercase;
+        padding-bottom: .5rem;
+        border-bottom: 0.0625rem solid #C2C2C2;
+
+        @media ($mobile) {
+            font-size: 1.6875rem;
+            text-align: center;
+        }
+    }
+
+    .content__filiais {
+        width: 100%;
+        padding-top: 5.8125rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media ($mobile) {
+            padding-top: 3.25rem;
+        }
+
+        .widget {
+            width: 20.625rem;
+            margin-right: 2.375rem;
+            margin-bottom: 8.8125rem;
+            position: relative;
+
+            @media ($mobile) {
+                margin-bottom: 2.5rem;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+
+            h2 {
+                border: none;
+                @include font-primary(1.125rem, 600);
+                color: $primary;
+                margin-bottom: 0.6875rem;
+
+                @media($mobile) {
+                    text-align: left;
+                    font-size: 1rem;
+                    margin-bottom: 0.75rem;
+                }
+            }
+
+            .telefone,
+            .email,
+            .endereco {
+                margin-bottom: 3.375rem;
+
+                @media ($mobile) {
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    @include font-primary(1rem, 300);
+                    color: $text;
+                    line-height: 1.75rem;
+                    margin-bottom: 1rem;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                    }
+
+                    strong {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .telefone {
+                min-height: 4.6875rem;
+            }
+
+            .link {
+                @include font-primary(1.125rem, 600);
+                color: $primary-light;
+                text-decoration: underline;
+                position: absolute;
+                bottom: 0;
+
+                @media ($mobile) {
+                    position: relative;
+                    bottom: initial;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.trabalhe__conosco {
+    width: 100%;
+    position: relative;
+    height: 27.6125rem;
+
+    @media ($mobile) {
+        height: 100%;
+        margin: auto auto 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .image__desktop {
+        position: relative;
+        width: 120rem;
+        left: -32rem;
+        z-index: -1;
+
+        @media ($mobile) {
+            display: none;
+        }
+
+        @media ($desktopLarge) {
+            left: 0;
+        }
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            height: 37.5rem;
+            width: 100%;
+            // z-index: -1;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .description {
+        padding-top: 5.2112rem;
+        position: absolute;
+
+        @media ($mobile) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+            margin: auto auto 0;
+            padding-top: 0;
+            padding-bottom: 2rem;
+            z-index: 1;
+        }
+
+        h2 {
+            @include titulo;
+            color: $white;
+            text-transform: uppercase;
+            max-width: 31.0625rem;
+            line-height: 3.375rem;
+
+            @media($mobile) {
+                max-width: 10.0625rem;
+                line-height: 2.3125rem;
+            }
+        }
+
+        .text {
+            max-width: 28.75rem;
+            margin-top: 1.125rem;
+
+            @media ($mobile) {
+                max-width: 17.375rem;
+                margin-top: 1rem;
+            }
+
+            p {
+                @include font-primary(1.125rem, 300);
+                color: $white;
+                line-height: 1.375rem;
+
+                @media ($mobile) {
+                    font-size: 0.875rem;
+                    line-height: 1.75rem;
+                }
+            }
+        }
+
+        .btn__secondary {
+            margin-top: 2.8831rem;
+
+            @media ($mobile) {
+                margin-top: 1.4819rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,681 @@
+.nosso__laboratorio {
+    width: 100%;
+    margin: 5.3125rem auto 8.375rem;
+
+    @media ($mobile) {
+        margin: 3.4475rem auto 0;
+        padding-bottom: 4rem;
+    }
+
+    .content__nosso__laboratorio {
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media ($mobile) {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .description {
+            h2 {
+                @include titulo;
+                color: $primary;
+                text-transform: uppercase;
+                margin-bottom: 2rem;
+
+                @media ($mobile) {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .text {
+                width: 100%;
+                max-width: 27.375rem;
+
+                @media ($mobile) {
+                    max-width: 100%;
+                }
+
+                p {
+                    @include font-primary(1.125rem, 300);
+                    color: $text;
+                    line-height: 1.75rem;
+                    margin-bottom: 1.5rem;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                ul {
+                    li {
+                        @include font-primary(1.125rem, 300);
+                        color: $text;
+                        line-height: 1.375rem;
+                        margin-bottom: 1rem;
+                        margin-left: 1rem;
+                        list-style: disc;
+
+                        &::marker {
+                            font-size: 0.875rem;
+                        }
+
+                        @media ($mobile) {
+                            font-size: 0.875rem;
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slider {
+            width: 36.875rem;
+
+            @media ($mobile) {
+                width: 17.4375rem;
+
+                .owl-item {
+                    width: 100%;
+                }
+            }
+
+            @media ($mobileMin) {
+                width: 14.4375rem;
+            }
+
+            .owl-dots {
+                bottom: -2.5rem;
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+
+                @media ($mobile) {
+                    bottom: -24px;
+                }
+
+                .owl-dot {
+                    width: 0.875rem;
+                    height: 0.875rem;
+                    background-color: #8E8E8E;
+                    border: 0.0625rem solid $white;
+                    border-radius: 100%;
+                    margin-right: 1.125rem;
+
+                    @media ($mobile) {
+                        width: 0.875rem;
+                        height: 0.875rem;
+                        margin-right: 1.1875rem;
+                        border-color: #707070;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &.active {
+                        background-color: $white;
+                        border: 2px solid $border;
+
+                        @media ($mobile) {
+                            border: 0.0625rem solid #707070;
+                        }
+                    }
+
+                    &>button {
+                        border-radius: 100%;
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nosso__equipamento {
+    width: 100%;
+    height: 100%;
+
+    .content__nosso__equipamento {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        margin: auto 0 6.7813rem auto;
+        position: relative;
+
+        @media ($mobile) {
+            margin-bottom: 2.8125rem;
+            height: 55.4375rem;
+            justify-content: initial;
+        }
+
+        @media ($mobileMin) {
+            height: 65.4375rem;
+        }
+
+        .image {
+            position: absolute;
+            left: -8.2rem;
+
+            @media ($mobile) {
+                bottom: 0;
+                left: -2.875rem;
+                order: 1;
+                margin-top: 1rem;
+                width: 20.9375rem;
+            }
+
+            @media ($mobileMin) {
+                width: 19rem;
+            }
+        }
+
+        .description {
+            width: 100%;
+            max-width: 33.5625rem;
+
+            @media ($mobile) {
+                order: 0;
+                max-width: 100%;
+            }
+
+            h2 {
+                @include font-primary(1.875rem, 700);
+                color: $primary-light;
+                margin-bottom: 2rem;
+
+                @media ($mobile) {
+                    font-size: 1.125rem;
+                    margin-bottom: 1rem;
+                    font-weight: 600;
+                }
+            }
+
+            .text {
+                p {
+                    @include font-primary(1.125rem, 300);
+                    color: $text;
+                    line-height: 1.75rem;
+                    margin-bottom: 1.5rem;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                        line-height: 1.75rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .inner__equipamentos {
+        width: 100%;
+
+        .accordeon {
+            width: 100%;
+            margin-bottom: 7.875rem;
+
+            @media ($mobile) {
+                margin-bottom: 5.5706rem;
+            }
+
+            details {
+                width: 100%;
+                margin: auto auto 1.25rem;
+                transition: all 1s !important;
+
+                &[open] {
+                    transition: all 2s !important;
+
+                    summary {
+                        margin-bottom: 2.5rem;
+
+                        .icon {
+                            img {
+                                transform: rotateX(-180deg);
+                                transition: all .4s
+                            }
+                        }
+                    }
+                }
+
+                summary::-webkit-details-marker {
+                    display: none;
+                }
+
+                summary {
+                    width: 100%;
+                    cursor: pointer;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 0.0625rem solid $primary-light;
+
+                    h3 {
+                        @include font-primary(1.5625rem, 700);
+                        color: $primary;
+                        line-height: 2rem;
+                        padding-bottom: 1rem;
+
+                        @media ($mobile) {
+                            font-size: 1rem;
+                            line-height: 1.5625rem;
+                            padding-bottom: 1rem;
+                        }
+                    }
+
+                    .icon {
+                        position: absolute;
+                        right: 1.25rem;
+                        top: 0;
+                        bottom: 0;
+                        display: flex;
+                        align-items: center;
+                        margin: auto;
+
+                        @media ($mobile) {
+                            top: 0;
+                            right: 0;
+                        }
+
+                        img {
+                            transform: rotateX(0);
+                            transition: all .4s
+                        }
+                    }
+                }
+
+                .content__details {
+                    display: grid;
+                    gap: 4.3rem;
+                    grid-template-columns: repeat(3, 1fr);
+
+                    @media ($mobile) {
+                        grid-template-columns: 1fr;
+                        gap: 0;
+                    }
+
+                    .text {
+                        margin-bottom: 0.3125rem;
+                        width: 100%;
+
+                        @media ($mobile) {
+                            width: 100%;
+                        }
+
+                        ul {
+                            li {
+                                @include font-primary(1rem, 300);
+                                color: $text;
+                                line-height: 1.25rem;
+                                margin-bottom: .8rem;
+                                list-style: disc;
+                                margin-left: 1rem;
+
+
+                                @media ($mobile) {
+                                    font-size: 0.75rem;
+                                    margin-bottom: 1rem;
+                                }
+
+                                ul {
+                                    li {
+                                        @media ($mobile) {
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.servicos__oferecidos {
+    width: 100%;
+    background-color: $text;
+    padding: 7.0938rem 0 7.375rem;
+
+    @media($mobile) {
+        padding: 4rem 0 3.375rem;
+    }
+
+    h2 {
+        @include titulo;
+        color: $white;
+        text-align: center;
+        margin-bottom: 3.9375rem;
+
+        @media($mobile) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .content__servicos__oferecidos {
+        width: 100%;
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            justify-content: center;
+            margin: auto auto 2.125rem 0;
+            width: 100%;
+            height: 34.375rem;
+
+            @media ($mobile) {
+                margin: auto auto 2.5rem;
+                height: 44.125rem;
+                justify-content: initial;
+
+                &:nth-child(2) {
+                    height: 35.125rem;
+                }
+
+                &:nth-child(3) {
+                    height: 32.125rem;
+                }
+            }
+
+            @media ($mobileMin) {
+                height: 49.125rem;
+
+                &:nth-child(2) {
+                    height: 38.125rem;
+                }
+
+                &:nth-child(3) {
+                    height: 33.125rem;
+                }
+            }
+
+            &:nth-child(even) {
+                margin: auto 0 2.125rem auto;
+                width: 100%;
+                align-items: flex-end;
+
+                .image {
+                    left: -8.1rem;
+
+                    @media ($mobile) {
+                        left: -2.875rem;
+                    }
+                }
+            }
+
+            .image {
+                position: absolute;
+                right: -8.1rem;
+
+                @media ($mobile) {
+                    right: -2.875rem;
+                    bottom: 0;
+                    width: 20.9375rem;
+                }
+
+                @media ($mobileMin) {
+                    width: 19rem;
+                }
+            }
+
+            .description {
+                @media ($mobile) {
+                    margin-bottom: 2.5rem;
+                    height: 26.25rem;
+                }
+
+                h3 {
+                    @include font-primary(1.875rem, 700);
+                    color: $primary-light;
+                    margin-bottom: 2rem;
+
+                    @media ($mobile) {
+                        font-size: 1.125rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                .text {
+                    width: 100%;
+                    max-width: 28.3125rem;
+
+                    @media ($mobile) {
+                        max-width: 100%;
+                    }
+
+                    p {
+                        @include font-primary(1.125rem, 300);
+                        color: $white;
+                        line-height: 1.75rem;
+
+                        @media ($mobile) {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lista__servicos {
+    width: 100%;
+    padding: 7.125rem 0 7.5rem;
+
+    @media ($mobile) {
+        padding: 3.8125rem 0 0;
+    }
+
+    h2 {
+        @include font-primary(1.875rem, 700);
+        color: $primary-light;
+        margin-bottom: 4rem;
+        text-align: center;
+
+        @media ($mobile) {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .content__lista__servicos {
+        width: 100%;
+
+        .accordeon {
+            width: 100%;
+
+            @media ($mobile) {
+                margin-bottom: 5.5706rem;
+            }
+
+            details {
+                width: 100%;
+                margin: auto auto 1.25rem;
+                transition: all 1s !important;
+
+                &[open] {
+                    transition: all 1s !important;
+                    margin-bottom: 2.5rem;
+
+                    summary {
+                        margin-bottom: 2.5rem;
+
+                        .icon {
+                            img {
+                                transform: rotateX(-180deg);
+                                transition: all .4s
+                            }
+                        }
+                    }
+                }
+
+                summary::-webkit-details-marker {
+                    display: none;
+                }
+
+                summary {
+                    width: 100%;
+                    cursor: pointer;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 0.0625rem solid $primary-light;
+
+                    h3 {
+                        @include font-primary(1.5625rem, 700);
+                        color: $primary;
+                        line-height: 2rem;
+                        padding-bottom: 1rem;
+
+                        @media ($mobile) {
+                            font-size: 1rem;
+                            line-height: 1.5625rem;
+                            max-width: 11.625rem;
+                        }
+                    }
+
+                    .icon {
+                        position: absolute;
+                        right: 1.25rem;
+                        top: 0;
+                        bottom: 0;
+                        display: flex;
+                        align-items: center;
+                        margin: auto;
+
+                        @media ($mobile) {
+                            top: 0;
+                            right: 0;
+                        }
+
+                        img {
+                            transform: rotateX(0);
+                            transition: all .4s
+                        }
+                    }
+                }
+
+                .content__details {
+                    display: grid;
+                    gap: 4.3rem;
+                    grid-template-columns: repeat(2, 1fr);
+
+                    @media ($mobile) {
+                        grid-template-columns: 1fr;
+                        gap: 0;
+                    }
+
+                    .text {
+                        margin-bottom: 0.3125rem;
+                        width: 100%;
+
+                        @media ($mobile) {
+                            width: 100%;
+                        }
+
+                        ul {
+                            margin-bottom: 1em;
+
+                            li {
+                                @include font-primary(1rem, 300);
+                                color: $text;
+                                line-height: 1.25rem;
+                                margin-bottom: .8rem;
+                                list-style: disc;
+                                margin-left: 1rem;
+
+                                &::marker {
+                                    font-size: 0.875rem;
+                                }
+
+                                @media ($mobile) {
+                                    font-size: 0.75rem;
+                                    margin-bottom: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tour {
+    width: 100%;
+    background-color: $text;
+    padding: 7.5rem 0;
+    position: relative;
+
+    @media ($mobile) {
+        padding: 3.375rem 0;
+    }
+
+    &::before {
+        content: '';
+        background: url(http://cbaa.local/wp-content/uploads/2023/05/mascara-centro-tecnologico.png) no-repeat left;
+        width: 120rem;
+        height: 43rem;
+        position: absolute;
+        top: -3.5rem;
+        z-index: 0;
+        left: -3.5rem;
+        background-size: auto;
+        vertical-align: middle;
+
+        @media ($mobile) {
+            background: url(http://cbaa.local/wp-content/uploads/2023/05/mascara-mobile.png)no-repeat left;
+            width: 100%;
+            height: 21.5rem;
+            left: 0;
+            top: -3.5rem;
+            background-size: 100%;
+        }
+    }
+
+    h2 {
+        @include titulo;
+        color: $white;
+        text-align: center;
+        margin-bottom: 4rem;
+
+        @media($mobile) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .content__tour {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+
+        .video {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            iframe {
+                width: 56.4375rem;
+                height: 29rem;
+
+                @media($mobile) {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

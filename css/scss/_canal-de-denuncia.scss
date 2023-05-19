@@ -1,0 +1,42 @@
+.canal__de__denuncia {
+    width: 100%;
+
+    .content__canal__de__denuncia {
+        width: 100%;
+        padding-top: 4.0625rem;
+
+        @media ($mobile) {
+            padding-top: 4rem;
+        }
+
+        .text {
+            width: 100%;
+
+            p {
+                @include font-primary(1.125rem, 300);
+                color: $text;
+                margin-bottom: 1.4rem;
+                line-height: 1.75rem;
+
+                @media ($mobile) {
+                    margin-bottom: 1rem;
+                }
+
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.form__canal {
+    width: 100%;
+    margin: 4.3125rem auto 9.065rem;
+
+    @media ($mobile) {
+        margin: 4rem auto 3.8125rem;
+    }
+
+    @include form;
+}

@@ -37,15 +37,15 @@
                         </li>
 
                         <li class="link">
-                            <a href="<?php echo get_home_url(); ?>" >Compliance</a>
+                            <a href="<?php echo get_home_url(); ?>/compliance">Compliance</a>
                         </li>
 
                         <li class="link">
-                            <a href="<?php echo get_home_url(); ?>" >Política de privacidade</a>
+                            <a href="<?php echo get_home_url(); ?>/politica-de-privacidade">Política de privacidade</a>
                         </li>
 
                         <li class="link">
-                            <a href="<?php echo get_home_url(); ?>">Ouvidoria</a>
+                            <a href="<?php echo get_home_url(); ?>/ouvidoria">Ouvidoria</a>
                         </li>
                     </ul>
                 </div>
@@ -58,19 +58,19 @@
                         </li>
 
                         <li class="link">
-                            <a href="<?php echo get_home_url(); ?>">Filiais</a>
+                            <a href="<?php echo get_home_url(); ?>/filiais">Filiais</a>
                         </li>
 
                         <li class="link mobile">
-                            <a href="<?php echo get_home_url(); ?>" >Compliance</a>
+                            <a href="<?php echo get_home_url(); ?>/compliance" >Compliance</a>
                         </li>
 
                         <li class="link mobile">
-                            <a href="<?php echo get_home_url(); ?>" >Política de privacidade</a>
+                            <a href="<?php echo get_home_url(); ?>/politica-de-privacidade" >Política de privacidade</a>
                         </li>
 
                         <li class="link mobile">
-                            <a href="<?php echo get_home_url(); ?>">Ouvidoria</a>
+                            <a href="<?php echo get_home_url(); ?>/ouvidoria">Ouvidoria</a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +84,7 @@
             </div>
 
             <div class="copy">
-                <p>© Todos os Direitos Reservados - CBAA - Asfaltos LTDA - Design by <a href="http://" target="_blank" rel="noopener noreferrer">Eólica.</a></p>
+                <p>© Todos os Direitos Reservados - CBAA - Asfaltos LTDA - Design by <a href="https://www.grupoeolica.com.br/" target="_blank" rel="noopener noreferrer">Eólica.</a></p>
             </div>
         </div>
         
