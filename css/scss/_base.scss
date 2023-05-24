@@ -142,3 +142,8 @@ main {
 	border-color: $orange-dark;
 	@include font-primary(0.75rem, 500);
 }
+
+.wpcf7 form.sent .wpcf7-response-output {
+	color: $white;
+	@include font-primary(0.75rem, 500);
+}

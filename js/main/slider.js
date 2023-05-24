@@ -38,9 +38,6 @@ $(document).ready(function() {
         dots: false,
         loop:false,
         margin: 40,
-        URLhashListener:true,
-        autoplayHoverPause:true,
-        startPosition: 'URLHash',
         responsive: {
             0: {
                 items: 2,
@@ -54,16 +51,6 @@ $(document).ready(function() {
               items: 4,
             }
         }
-    });
-
-    var owl = $('.slider-nossa-historia');
-    owl.on("mousewheel", ".owl-stage", function (e) {
-      if (e.originalEvent.wheelDelta > 0) {
-        owl.trigger("prev.owl");
-      } else {
-        owl.trigger("next.owl");
-      }
-      e.preventDefault();
     });
 })
 

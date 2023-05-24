@@ -251,7 +251,7 @@ get_header();
                                             <p>O ECO-DOPE CBAA é um aditivo químico com alta estabilidade térmica, resistente à altas temperaturas, que melhora consideravelmente a adesividade na intenção do ligante asfáltico / agregado. A formulação contém componentes químicos que proporcionam a melhor afinidade entre agregados e ligantes asfálticos na presença de água, impedindo o deslocamento da película asfáltica que recobre o agregado.</p>
                                         </div>
 
-                                        <div class="produtos">
+                                        <div class="produtos melhorado">
                                             <?php
                                                 $args = array (
                                                     'post_type' => 'produtos',
@@ -274,7 +274,7 @@ get_header();
 
                         <h4><?php the_field('texto_acima_do_botao'); ?></h4>
 
-                        <a href="" class="btn btn__primary">Catálogo completo</a>
+                        <a href="<?php the_field('arquivo_do_catalogo'); ?>" class="btn btn__primary" target="_blank">Catálogo completo</a>
                     </div>
                 </div>
             </section>

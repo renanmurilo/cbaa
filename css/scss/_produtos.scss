@@ -199,7 +199,7 @@
                             max-width: 39.23rem;
                             display: grid;
                             grid-template-columns: repeat(3, 1fr);
-                            gap: 3.6875rem;
+                            gap: 2.5rem;
 
                             @media ($mobile) {
                                 max-width: 100%;
@@ -209,11 +209,17 @@
                                 margin: auto;
                             }
 
+                            &.melhorado {
+                                .produto {
+                                    width: 13.605rem;
+                                }
+                            }
+
                             .produto {
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
-                                width: 10.605rem;
+                                width: 11.605rem;
                                 height: 15.6875rem;
 
                                 @media ($mobile) {
@@ -225,6 +231,9 @@
                                 .image {
                                     width: 10.605rem;
                                     height: 10.605rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    margin: auto;
 
                                     @media ($mobile) {
                                         width: 5.595rem;

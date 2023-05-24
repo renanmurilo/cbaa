@@ -30,7 +30,7 @@ get_header();
                                 <p>T. <?php the_field('telefone'); ?></p>
                             </div>
                             <div class="email">
-                                <p>E-mail. <?php the_field('email'); ?></p>
+                                <p><?php the_field('email'); ?></p>
                             </div>
                             <div class="endereco">
                                 <p><?php the_field('endereco'); ?></p>
